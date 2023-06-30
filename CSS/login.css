@@ -1,0 +1,353 @@
+/* Mobile.ver CSS */
+@media all and (min-width: 320px) {
+  /* 기본 CSS */
+  #wrap {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+  #wrap section {
+    box-sizing: border-box;
+  }
+  
+  /* Bounce In */
+  .tittle {
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+  }
+  .tittle:hover, .tittle:focus, .tittle:active {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+    transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+  }
+
+/* 인포메이션 영역 CSS */
+.info_section {
+  order: 1;
+  width: 100%;
+  height: 36px auto;
+}
+.info_list {
+  display: flex;
+  flex-direction: row;
+  margin: 30px 0 auto;
+}
+.info_list li {
+  width: 25%;
+  text-align: center;
+  cursor: pointer;
+}
+
+.info_list li a {
+  display: inline-block;
+  padding: 10px 0;
+  padding: 0.625rem 0;
+  padding-bottom: 1px;
+}
+
+
+
+/* 사이드메뉴 영역 */
+
+.side_menu input[type=checkbox]{
+  display: none;
+}
+
+.side_menu {
+  padding-top: 9px;
+}
+
+.side_menu_list {
+  display: none;
+}
+
+.side_menu_list li {
+  width: 100%;
+  text-align: left;
+  padding: 10px 0 5px 5px;
+  border-right:  1px solid red;
+  border-bottom:  1px solid red;
+  border-radius: 15px;
+}
+
+.side_menu input[type=checkbox]:checked~.side_menu_list{
+  display: block;
+}
+
+  }
+  /* 헤더 영역 CSS */
+  .header {
+    display: flex;
+    order: 2;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    height: 140px;
+    height: 8.75rem;
+    margin-top: 10px;
+    border-bottom: 3px solid #ccc;
+  }
+  .header .logo {
+    order: 1;
+    width: 100%;
+    height: 120px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .header .nav {
+    order: 2;
+    width: 100%;
+  }
+  .gnb li {
+    float: left;
+    margin-left: 2px;
+    width: 24%;
+    text-align: center;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+  }
+  .gnb li:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: red;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+  }
+  .gnb li:hover, .gnb li:focus .gnb li:active {
+    background-color: rgba(25, 25, 25, 0.9);
+  }
+  .gnb li:hover:before, .gnb li:focus:before, .gnb li:active:before {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+  .gnb li {
+    display: none;
+  }
+
+/* 로그인 영역 */
+
+#container {
+  order: 2;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 100px;
+  padding-bottom: 200px;
+  border-bottom: 1px solid #ccc;
+}
+#signup {
+  border: 1px solid rgb(50, 50, 50);
+  border-radius: 5px;
+  padding: 20px;
+  width: 400px;
+  height: 200px;
+  margin: 30px auto;
+  background: rgb(90, 90, 90);
+}
+#signup fieldset {
+  border: 1px solid rgb(50, 50, 50);
+  margin-bottom: 20px;
+}
+#signup legend {
+  font-size: 16px;
+  font-weight: bold;
+  padding-left: 5px;
+  padding-bottom: 10px;
+}
+#signup ul li {
+  list-style: none;
+  padding: 5px 10px;
+  margin-bottom: 2px;
+  line-height: 30px;
+}
+#signup label {
+  float: left;
+  font-size: 13px;
+  width: 110px;
+}
+#signup input {
+  background: rgb(70, 70, 70);
+}
+button {
+  border: 1px solid transparent;
+  border-radius: 10px;
+  display: block;
+  background: rgb(180, 180, 180);
+  width: 300px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  padding: 7px 25px;
+  margin: auto;
+  cursor: pointer;
+}
+button:hover {
+  background-color: red;
+  color: #FFF;
+}
+input[type=text], input[type=password] {
+  border: 1px solid #CCC;
+  border-radius: 3px;
+  font-size: 13px;
+  padding: 5px;
+  width: 200px;
+}
+input[required] {
+  border: 1px solid red;
+}
+#signup fieldset:nth-child(2), #signup fieldset:nth-child(3) {
+  border: none; 
+}
+.small {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+.small li {
+  border: none;
+  font-size: 11px;
+  text-decoration: underline;
+}
+.small li a:hover {
+  color: red;
+}
+#signup fieldset:nth-child(2) {
+  margin: 0;
+}
+
+/* 푸터영역 */
+
+#footer {
+  order: 5;
+  width: 100%;
+}
+#footer .policy_list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  border-bottom: 1px solid #ebebeb;
+}
+#footer .policy_list a {
+  font-weight: 500;
+  font-size: 13px;
+  color: #fff;
+  line-height: 1.462em;
+}
+#footer .policy_list a strong {
+  font-weight: 700;
+  text-decoration: underline;
+}
+#footer .company_info_wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 23px 0;
+}
+.company_info {
+  font-size: 12px;
+  color: #fff;
+  line-height: 1.667em;
+}
+.company_info .company_info_list {
+  display: flex;
+}
+dl, dt, dd {
+  font-size: 100%;
+  margin: 0;
+  padding: 1px;
+  border: 0;
+}
+#footer {
+  display: none;
+}
+
+/* 푸터M 영역 */
+
+.contentinfo {
+  order: 5;
+  line-height: 20px;
+  width: 100%;
+  text-align: center;
+  margin: 20px 0 20px 0;
+}
+
+.mf_info a {
+  border-right: 1px solid #FFF;
+  padding: 0 5px 0 5px;
+}
+
+.mf_info a:nth-child(3) {
+  border: none;
+}
+
+/* Tablet.ver CSS */
+@media all and (min-width: 768px) {
+  /* 기본 CSS */
+  #wrap {
+    flex-flow: row wrap;
+  }
+  /* 헤더 영역 CSS */
+  .gnb li {
+    width: 19%;
+  }
+  
+/* 푸터영역 */
+
+#footer {
+  display: none;
+}
+}
+
+/* PC.ver CSS */
+@media all and (min-width: 960px) {
+/* 기본 CSS */
+#wrap {
+  position: relative;
+  width: 90%;
+}
+/* 헤더 영역 CSS */
+.gnb li {
+  width: 16%;
+}
+.gnb li {
+  display: unset;
+}
+  
+/* 푸터 영역 */
+
+#footer {
+  display: unset;
+}
+
+/* 푸터M 영역 */
+
+.contentinfo {
+  display: none;
+}
+}
